@@ -1,3 +1,3 @@
 # cpplox-TreeWalk_Interpreter-
 
-I m following along the book "Crafting Interpreter" but i have no java knowledge and dont want to get side track learning java so i m following along the book with ChatGpt's help
+I'm working on implementing a tree walk interpreter in C++ following the concepts from the book 'Crafting Interpreter.' Since I know nothing of Java, I've decided to skip learning it and rely on ChatGpt for assistance. Since I m learning as I go...Feel free to criticize or point out on my shortcomings if you don't mind
