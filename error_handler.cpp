@@ -2,7 +2,7 @@
 
 void Lox::report (int line, const std::string& where, const std::string& message)
 {
-  std::cerr << "[L[i]ne: " << line << "] - err[o]r " << where << " : " << message;
+  std::cerr << "[L[i]ne: " << line << "] - err[o]r " << where << " : " << message << '\n';
   hadError = true;
 }
 

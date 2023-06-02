@@ -12,11 +12,12 @@
 class Scanner
 {
   private:
-                                              // fl[a]gs
+                                              //// fl[a]gs
     int start {0};
     int current {0};
     int line{1};
-                                              // d[a]ta st[o]rage
+    bool recognize_decimal {false};
+                                              //// d[a]ta st[o]rage
     const std::string source;
     std::vector<Token> tokens;                
 
@@ -26,14 +27,23 @@ class Scanner
     Scanner (std::string source_);
 
     //// - func[t]ions -
-                                              // - cond[i]tion ch[e]ckers
+                                              //// - cond[i]tion ch[e]ckers
     bool isAtEnd ();
-                                              // - lo[o]k ah[e]ad
+    bool isDigit (char expected);
+    bool isAlpha (char expected);
+    bool isAlphaNumeric (char expected);
+    bool match (char expected);
+                                              //// - lo[o]k ah[e]ad
     char advance ();
-                                              // - to[k]en han[d]lers
+    char peek ();
+    char peekNext ();
+                                              //// - to[k]en han[d]lers
     std::vector<Token> scanTokens ();
     void scanToken ();
     void addToken (TokenType type, Object literal = Object{nullptr});
+                                              //// - lite[r]al fun[c]tions han[d]lers
+    std::string string_literal ();
+    double number_literal ();
 };
 
 #endif

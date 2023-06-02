@@ -4,6 +4,7 @@
 Object::Object () {}
 Object::Object (variant obj_) : obj{obj_} {}
 
+                      //// - func[t]ions -
 std::ostream& operator<< (std::ostream& os, const Object& o)
 {
   std::visit (        // std::visit takes "visitor function" and "variant" as argument { visitor function -> lamba function or function obj is a callable object } 
